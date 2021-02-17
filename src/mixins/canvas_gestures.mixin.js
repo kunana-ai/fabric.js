@@ -32,8 +32,8 @@
           self: self,
           target: target
         };
-
-        this.__gesturesRenderer();
+        // MARK ignore transform using gestures.
+        // this.__gesturesRenderer();
       }
 
       this.fire('touch:gesture', {
