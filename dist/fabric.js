@@ -13915,7 +13915,7 @@ fabric.PatternBrush = fabric.util.createClass(fabric.PencilBrush, /** @lends fab
         this._fireOverOutEvents(target, e);
       }
       else {
-        if (e && e.touches && e.touches.length === 1){
+        if (e.touches === undefined || (e.touches && e.touches.length === 1)){
           this._transformObject(e);
         }
       }
@@ -14792,7 +14792,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
           self: self,
           target: target
         };
-
+        // MARK ignore transform using gestures.
         // this.__gesturesRenderer();
       }
 

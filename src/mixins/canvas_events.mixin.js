@@ -814,7 +814,7 @@
         this._fireOverOutEvents(target, e);
       }
       else {
-        if (e && e.touches && e.touches.length === 1){
+        if (e.touches === undefined || (e.touches && e.touches.length === 1)){
           this._transformObject(e);
         }
       }
